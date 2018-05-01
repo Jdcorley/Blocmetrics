@@ -12,7 +12,9 @@ gem 'rails', '~> 5.2.0'
    gem 'sqlite3'
    gem 'web-console'
  end
- 
+
+ gem 'haml' 
+ gem 'haml-rails'
  gem 'puma'
  gem 'sass-rails'
  gem 'uglifier'
@@ -21,6 +23,7 @@ gem 'rails', '~> 5.2.0'
  gem 'turbolinks'
  gem 'bootstrap'
  gem 'figaro'
+ gem 'bootsnap', require: false
 
  group :development, :test do
    gem 'byebug'
@@ -28,9 +31,10 @@ gem 'rails', '~> 5.2.0'
    gem 'rspec-rails'
    gem 'shoulda'
    gem 'faker'
-   gem 'factory_girl_rails'
+   gem 'factory_bot'
    gem 'pry-rails'
    gem 'rails-erd'
    gem 'htmlbeautifier'
    gem 'rubocop'
+   gem 'listen'
  end
