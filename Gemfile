@@ -21,7 +21,7 @@ gem 'rails', '~> 5.2.0'
  gem 'coffee-rails'
  gem 'jquery-rails'
  gem 'turbolinks'
- gem 'bootstrap'
+ gem 'bootstrap-sass'
  gem 'figaro'
  gem 'bootsnap', require: false
 
