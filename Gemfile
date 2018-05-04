@@ -13,6 +13,7 @@ gem 'rails', '~> 5.2.0'
    gem 'web-console'
  end
 
+ gem 'devise'
  gem 'haml' 
  gem 'haml-rails'
  gem 'puma'
