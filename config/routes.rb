@@ -4,6 +4,9 @@ Rails.application.routes.draw do
     get 'sign_in', to: 'devise/sessions#new'
   end
 
+  resources :applications
+  get 'application/index'
+
   get 'welcome/index'
   get 'welcome/about'
   root 'welcome#index'

@@ -28,6 +28,7 @@
 %div.container 
   %ul{:class => 'nav nav-tabs'}
     %li= link_to 'Home', root_path 
-    %li= link_to 'About', welcome_about_path 
+    %li= link_to 'About', welcome_about_path
+    %li= link_to 'Your Apps', application_index_path
      
   = yield
