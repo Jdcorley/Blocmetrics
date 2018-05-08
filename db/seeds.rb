@@ -21,16 +21,15 @@ User.create!(
 users = User.all 
 
 10.times do 
-  Application.create!(
-    user: users.sample, 
-    updated_at: Time.now, 
+  RegisteredApplication.create!(
+    user: users.sample,
     name: Faker::App.name,
     url: Faker::Internet.url 
  )
 end 
 
- applications = Application.all 
+ registered_applications = RegisteredApplication.all 
 
  puts "#{User.count} users created."
- puts "#{Application.count} applications added."
+ puts "#{RegisteredApplication.count} registered_applications added."
 

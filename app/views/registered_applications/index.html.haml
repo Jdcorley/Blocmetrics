@@ -1,0 +1,11 @@
+%div.container 
+  %h1 My Registered Applications 
+  %div.row 
+    %div.col-md-8
+      - current_user.registered_applications.each do |app|
+        = render partial: 'registered_application', locals: {registered_application: app }
+        
+
+%br
+
+  \#{link_to 'New Registered application', new_registered_application_path, :class => 'btn btn-success'}

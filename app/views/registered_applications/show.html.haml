@@ -1,0 +1,14 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @registered_application.name
+%p
+  %b Url:
+  = @registered_application.url
+
+= link_to 'Edit', edit_registered_application_path(@registered_application)
+\|
+= link_to 'Destroy', registered_application_path, method: :delete, data: { confirm: 'Are you sure?' }
+\|
+= link_to 'Back', registered_applications_path
