@@ -1,0 +1,9 @@
+%div.container 
+  = form_for @application do |f|
+    = form_tag(application[:name]) do
+      = f.label :name
+      = f.text_field :name, class: 'form-control', placeholder: "Enter application name"
+    = form_tag(application[:url]) do
+      = f.label :url
+      = f.text_field :url, class: 'form-control', placeholder: "Enter application url"
+      = f.submit "Save", class: 'btn-btn-success'

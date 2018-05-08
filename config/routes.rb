@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'sign_in', to: 'devise/sessions#new'
   end
-
+  
+  
   resources :applications
-  get 'application/index'
+  get '/applications', to: 'applications#create', as: 'register_app'
 
   get 'welcome/index'
   get 'welcome/about'

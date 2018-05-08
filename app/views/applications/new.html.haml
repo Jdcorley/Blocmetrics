@@ -1,0 +1,10 @@
+%div.container
+  %div.col-md-4
+    %h1 Register a new Application 
+    %ul 
+      %li Register a new application and start tracking your applications event data today!
+      %li Please provide us with a name for your application and a url. 
+      %li Enjoy! 
+    %br
+    %div.col-md-8 
+      = render partial: 'form', locals:{application: @application}

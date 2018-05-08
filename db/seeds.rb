@@ -22,7 +22,8 @@ users = User.all
 
 10.times do 
   Application.create!(
-    user: users.sample,
+    user: users.sample, 
+    updated_at: Time.now, 
     name: Faker::App.name,
     url: Faker::Internet.url 
  )
