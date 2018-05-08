@@ -6,6 +6,11 @@
 %p
   %b Url:
   = @registered_application.url
+%p 
+  %b Events: 
+  = @events 
+%p 
+  %b Total Event Count: #{@events.count}
 
 = link_to 'Edit', edit_registered_application_path(@registered_application)
 \|

@@ -26,10 +26,19 @@ users = User.all
     name: Faker::App.name,
     url: Faker::Internet.url 
  )
+end
+
+registered_applications = RegisteredApplication.all 
+
+20.times do 
+  Event.create!(
+    registered_application: registered_applications.sample, 
+    name: Faker::Time.between(DateTime.now - 1, DateTime.now)
+  )
 end 
 
- registered_applications = RegisteredApplication.all 
+events = Event.all  
 
  puts "#{User.count} users created."
  puts "#{RegisteredApplication.count} registered_applications added."
-
+ puts "#{Event.count} application events added."
