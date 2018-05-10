@@ -3,11 +3,13 @@ class API::EventsController < ApplicationController
   before_action :set_access_control_headers 
 
   def create 
-    registered_application = RegisteredApplication.find_by(url: request.env['HTTP_ORIGIN'])
-    if registered_application nil? 
+    are_application = RegisteredApplication.find_by(url: request.env['HTTP_ORIGIN'])
+    if are_application.nil?
+      Rails.logger.info('got here')
       render json: 'Unregistered application', status: :unprocessable_entity
-    else 
-      @event = registered_application.event.new(event_params)
+    else
+      Rails.logger.info('got here 2')
+      @event = are_application.events.new(event_params)
       if @event.save
         render json: @event, status: :created 
       else 
