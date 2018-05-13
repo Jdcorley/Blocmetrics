@@ -13,6 +13,8 @@ gem 'rails', '~> 5.2.0'
    gem 'web-console'
  end
 
+ gem 'groupdate'
+ gem "chartkick"
  gem 'faker'
  gem 'devise'
  gem 'haml' 
